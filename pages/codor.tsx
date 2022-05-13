@@ -120,6 +120,7 @@ const Codor: NextPage = () => {
                   selectedAnswers[questionIndex] == optionIndex ? `bg-sky-400 hover:bg-sky-400` : `bg-zinc-300 hover:bg-sky-400`
                 }`}
                 onClick={() => handleSelectOption(questionIndex, optionIndex)}
+                key={questions[questionIndex].question}
               >
                 {optionIndex + 1}. {option}
               </button>
