@@ -8,8 +8,8 @@ module.exports = {
   },
   works: [
     {
-      name: "Codle",
-      description: "Codle is a game that allows beginners learning programming to test their knowledge!",
+      name: "Codor",
+      description: "Codor is a tool that allows beginners learning programming to test their knowledge!",
       image: "",
       url: "",
     },

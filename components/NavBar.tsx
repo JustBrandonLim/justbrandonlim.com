@@ -23,8 +23,8 @@ const NavBar: NextPage = () => {
           </Link>
         </li>
         <li>
-          <Link href="/coda">
-            <a className="hover:text-sky-500">Coda</a>
+          <Link href="/codor">
+            <a className="hover:text-sky-500">Codor</a>
           </Link>
         </li>
         <li>
