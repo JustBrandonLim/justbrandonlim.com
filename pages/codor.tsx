@@ -37,7 +37,6 @@ const Codor: NextPage = () => {
 
   const handleNextQuestion = () => {
     if (questions && questionIndex < questions.length - 1) setQuestionIndex((questionIndex) => questionIndex + 1);
-    console.log(questionIndex);
   };
 
   const handleSubmit = () => {
@@ -120,7 +119,7 @@ const Codor: NextPage = () => {
                   selectedAnswers[questionIndex] == optionIndex ? `bg-sky-400 hover:bg-sky-400` : `bg-zinc-300 hover:bg-sky-400`
                 }`}
                 onClick={() => handleSelectOption(questionIndex, optionIndex)}
-                key={questions[questionIndex].question}
+                key={optionIndex}
               >
                 {optionIndex + 1}. {option}
               </button>
