@@ -18,10 +18,16 @@ text-white font-bold text-3xl md:text-5xl
 text-white font-bold text-xl md:text-3xl
 ```
 
-### Heading 4
+### Heading 3
 
 ```
 text-white font-bold text-lg md:text-xl
+```
+
+### Heading 4
+
+```
+text-white font-bold
 ```
 
 ### Paragraph

@@ -1,11 +1,12 @@
 import { NextPage } from "next";
+import SocialsBar from "@components/SocialsBar";
 
 const Footer: NextPage = () => {
   return (
     <section className="container max-w-3xl p-5">
-      <p></p>
-      <p className="text-white text-center">&copy; 2022 JustBrandonLim.</p>
-      <p className="text-white text-center">All rights reserved.</p>
+      <SocialsBar />
+      <p className="mb-5 text-center text-white">&copy; {new Date().getFullYear()} JustBrandonLim.</p>
+      <p className="text-center text-white">All rights reserved.</p>
     </section>
   );
 };

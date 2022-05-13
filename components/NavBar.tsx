@@ -5,13 +5,13 @@ import Logo from "@images/logo.png";
 
 const NavBar: NextPage = () => {
   return (
-    <nav className="container max-w-3xl flex p-5 items-center justify-between text-white">
+    <nav className="container flex items-center justify-between max-w-3xl p-5 text-white">
       <Link href="/">
         <a>
-          <Image src={Logo} alt="Brandon Lim" width={48} height={48} quality={100} placeholder="blur" />
+          <Image src={Logo} alt="Brandon Lim" layout="fixed" width={50} height={50} quality={100} placeholder="blur" />
         </a>
       </Link>
-      <ul className="hidden md:flex gap-10">
+      <ul className="hidden gap-5 md:flex">
         <li>
           <Link href="/">
             <a className="hover:text-sky-500">Home</a>
@@ -20,6 +20,11 @@ const NavBar: NextPage = () => {
         <li>
           <Link href="/works">
             <a className="hover:text-sky-500">Works</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/coda">
+            <a className="hover:text-sky-500">Coda</a>
           </Link>
         </li>
         <li>

@@ -1,14 +1,14 @@
+import WorksGallery from "@components/WorksGallery";
 import type { NextPage } from "next";
 
 const Works: NextPage = () => {
   return (
-    <>
-      <section>
-        <div className="container min-h-screen p-5">
-          <h1 className="text-3xl md:text-5xl text-center font-bold text-white">Works</h1>
-        </div>
+    <div className="min-h-screen">
+      <section className="container max-w-2xl p-5">
+        <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Works</h1>
+        <WorksGallery />
       </section>
-    </>
+    </div>
   );
 };
 
