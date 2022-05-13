@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <section className="container flex flex-col items-center max-w-2xl gap-5 p-5 md:flex-row">
         <div>
           <h1 className="text-3xl font-bold text-center text-white md:text-5xl">Brandon Lim</h1>
-          <p className="text-center text-slate-300">I'm an aspiring software engineer based in Singapore.</p>
+          <p className="text-center text-slate-300">I&apos;m an aspiring software engineer based in Singapore.</p>
           <SocialsBar />
         </div>
         <Image className="rounded-full" src={BrandonLim} alt="Brandon Lim" layout="fixed" width={150} height={150} quality={100} priority />
