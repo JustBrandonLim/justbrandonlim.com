@@ -2,9 +2,15 @@
 
 I use [Next.js](https://nextjs.org/) for my personal website.
 
+You can check out the website [here](https://justbrandonlim.com).
+
 If you are looking to use this as a base for your own website, please remember to link back to my website and don't steal my work.
 
-You can check out the website [here](https://justbrandonlim.com).
+You can change the configurations by editing `/site.config.ts`.
+
+## Codor
+
+It is currently still a work in progress. I am working on it during my free time.
 
 ## Getting Started
 

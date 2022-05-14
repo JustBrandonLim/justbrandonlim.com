@@ -3,17 +3,17 @@ import { NextPage } from "next";
 import NavBar from "@components/NavBar";
 import Footer from "@components/Footer";
 
-interface LayoutProps {
+interface Layout {
   children: React.ReactNode;
 }
 
-const Layout: NextPage<LayoutProps> = (props) => {
+const Layout: NextPage<Layout> = (layout) => {
   return (
     <>
       <header>
         <NavBar />
       </header>
-      <main>{props.children}</main>
+      <main>{layout.children}</main>
       <footer>
         <Footer />
       </footer>

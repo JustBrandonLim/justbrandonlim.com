@@ -36,6 +36,12 @@ text-white font-bold
 text-slate-300 text-base
 ```
 
+### Anchor
+
+```
+underline text-sky-500 underline-offset-2 hover:text-sky-400
+```
+
 ### Navigation Bar
 
 ```
@@ -46,4 +52,16 @@ text-white
 
 ```
 text-white
+```
+
+### Button
+
+```
+p-3 transition-colors duration-300 rounded-lg shadow-lg bg-sky-500 hover:bg-sky-400
+```
+
+### Card
+
+```
+p-5 rounded-lg shadow-lg bg-zinc-700
 ```

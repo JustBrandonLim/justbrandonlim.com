@@ -46,6 +46,15 @@ const Codor: NextPage = () => {
     setLanguage("Score");
   };
 
+  const handleShare = () => {
+    if (questions)
+      navigator.clipboard.writeText(
+        "I scored " + score + " out of " + questions.length + " on Codor!\nTry it at https://www.justbrandonlim.com/codor now!"
+      );
+
+    setQuestions(null);
+  };
+
   if (!questions)
     return (
       <div className="min-h-screen">
@@ -53,7 +62,7 @@ const Codor: NextPage = () => {
           <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Codor</h1>
           <p className="mb-5 text-slate-300">Codor is a tool that allows beginners learning programming to test their knowledge!</p>
           <p className="mb-5 text-slate-300">To get started, select a language to test yourself below!</p>
-          <div className="grid grid-cols-2 gap-5 p-5 rounded-lg shadow-lg md:grid-cols-3 bg-zinc-700">
+          <div className="grid grid-cols-2 gap-5 p-5 mb-5 rounded-lg shadow-lg md:grid-cols-3 bg-zinc-700">
             <button
               className="p-3 transition-colors duration-300 rounded-lg shadow-lg bg-sky-500 hover:bg-sky-400"
               onClick={() => getQuestions("Python")}
@@ -73,6 +82,52 @@ const Codor: NextPage = () => {
               C++
             </button>
           </div>
+          <p className="mb-5 text-slate-300">
+            Special thanks to{" "}
+            <a
+              className="underline text-sky-500 underline-offset-2 hover:text-sky-400"
+              href="https://github.com/pangkaho14"
+              aria-label="@pangkaho14"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @pangkaho14
+            </a>
+            ,{" "}
+            <a
+              className="underline text-sky-500 underline-offset-2 hover:text-sky-400"
+              href="https://github.com/Medioec"
+              aria-label="@Medioec"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @Medioec
+            </a>
+            ,{" "}
+            <a
+              className="underline text-sky-500 underline-offset-2 hover:text-sky-400"
+              href="https://github.com/ministic2001"
+              aria-label="@ministic2001"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @ministic2001
+            </a>{" "}
+            for contributing questions.
+          </p>
+          <p className="text-slate-300">
+            Want to contribute more questions? Check out my{" "}
+            <a
+              className="underline text-sky-500 underline-offset-2 hover:text-sky-400"
+              href="https://github.com/JustBrandonLim/justbrandonlim.com/blob/main/README.md"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>{" "}
+            for contribution guide.
+          </p>
         </section>
       </div>
     );
@@ -96,6 +151,9 @@ const Codor: NextPage = () => {
               onClick={() => setQuestions(null)}
             >
               Quit
+            </button>
+            <button className="p-3 transition-colors duration-300 bg-green-500 rounded-lg shadow-lg hover:bg-green-400" onClick={() => handleShare()}>
+              Share
             </button>
           </div>
         </section>

@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const Custom404: NextPage = () => {
+const Codle: NextPage = () => {
   return (
     <div className="min-h-screen">
       <section className="container max-w-2xl gap-5 p-5">
-        <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Page Not Found</h1>
+        <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Codle</h1>
+        <p className="mb-5 text-slate-300">Coming soon!</p>
         <p className="text-slate-300">
           Click{" "}
           <Link href="/" aria-label="Home">
@@ -20,4 +21,4 @@ const Custom404: NextPage = () => {
   );
 };
 
-export default Custom404;
+export default Codle;
