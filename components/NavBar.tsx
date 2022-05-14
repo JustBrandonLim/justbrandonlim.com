@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@images/logo.png";
+import BrandonLim from "@images/brandon-lim.png";
 import React from "react";
 
 const NavBar: NextPage = () => {
@@ -60,8 +61,8 @@ const NavBar: NextPage = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a className="text-white hover:text-sky-500" href="/resume.pdf" aria-label="Resume" target="_blank" rel="noopener noreferrer">
+            <Link href="/resume.pdf">
+              <a className="text-white hover:text-sky-500" aria-label="Resume" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Link>
