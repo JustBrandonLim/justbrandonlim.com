@@ -1,4 +1,5 @@
 export default {
+  language: "en-SG",
   url: "https://justbrandonlim.com/",
   title: "Brandon Lim",
   description:
