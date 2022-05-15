@@ -1,4 +1,4 @@
-# JustBrandonLim
+# JustBrandonLim.com
 
 I use [Next.js](https://nextjs.org/) for my personal website.
 

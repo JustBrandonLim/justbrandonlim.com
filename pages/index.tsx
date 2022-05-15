@@ -42,13 +42,6 @@ const Home: NextPage = () => {
           <h2 className="mb-5 text-xl font-bold text-white md:text-3xl">Featured Works</h2>
           <WorksGallery displayFeaturedOnly={true} />
         </section>
-        <section className="container max-w-2xl gap-5 p-5">
-          <h2 className="mb-5 text-xl font-bold text-white md:text-3xl">Announcement</h2>
-          <div className="p-5 rounded-lg shadow-lg bg-zinc-700">
-            <p className="mb-5 text-slate-300">Check back here often! I work on my personal website whenever I am free!</p>
-            <p className="text-right text-slate-300">- Brandon Lim</p>
-          </div>
-        </section>
       </div>
     </>
   );

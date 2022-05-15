@@ -3,13 +3,35 @@ import Head from "next/head";
 import SiteConfig from "../site.config";
 
 interface SearchEngineOptimizationProps {
-  displayFeaturedOnly?: boolean;
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
 }
 
 const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searchEngineOptimizationProps) => {
+  const title = searchEngineOptimizationProps.title ? searchEngineOptimizationProps.title + " - " + SiteConfig.title : SiteConfig.title;
+  const description = searchEngineOptimizationProps.description ? searchEngineOptimizationProps.description : SiteConfig.description;
+  const url = searchEngineOptimizationProps.url ? SiteConfig.url + searchEngineOptimizationProps.url : SiteConfig.url;
+  const image = searchEngineOptimizationProps.image ? SiteConfig.url + searchEngineOptimizationProps.image : SiteConfig.url + SiteConfig.image;
   return (
     <Head>
-      <title>Brandon Lim</title>
+      <title>{title}</title>
+      <meta name="description" content={description} key="description" />
+      <link rel="canonical" href={url} key="canonical" />
+
+      <meta property="og:title" content={title} key="og:title" />
+      <meta property="og:type" content="website" key="og:type" />
+      <meta property="og:url" content={url} key="og:url" />
+      <meta property="og:image" content={image} key="og:image" />
+
+      <meta property="og:site_name" content={SiteConfig.title} key="og:site_name" />
+
+      <meta property="twitter:card" content="website" key="twitter:card" />
+      <meta property="twitter:site" content={SiteConfig.twitterUsername} key="twitter:site" />
+      <meta property="twitter:description" content={description} key="twitter:description" />
+      <meta property="twitter:title" content={title} key="twitter:title" />
+      <meta property="twitter:image" content={image} key="twitter:image" />
     </Head>
   );
 };

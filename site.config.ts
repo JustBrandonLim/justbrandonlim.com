@@ -1,5 +1,10 @@
 export default {
   url: "https://justbrandonlim.com/",
+  title: "Brandon Lim",
+  description:
+    "Brandon Lim is an aspiring software engineer based in Singapore. He specializes in creating softwares that solves real world problems.",
+  image: "images/brandon-lim.png",
+  twitterUsername: "@JustBrandonLim",
   googleAnalyticsTag: "G-125BWRKTSY",
   socials: {
     github: "https://github.com/JustBrandonLim",
