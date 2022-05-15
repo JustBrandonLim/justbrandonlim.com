@@ -80,9 +80,9 @@ const NavBar: NextPage = () => {
           </li>
           <span className="text-white">|</span>
           <li>
-            <Link href="/codle">
-              <a className="text-white hover:text-sky-500" aria-label="Codle">
-                Codle
+            <Link href="/blog">
+              <a className="text-white hover:text-sky-500" aria-label="Blog">
+                Blog
               </a>
             </Link>
           </li>
@@ -135,9 +135,9 @@ const NavBar: NextPage = () => {
           </li>
           <hr className="text-white" />
           <li>
-            <Link href="/codle">
-              <a className="text-white hover:text-sky-500" aria-label="Codle" onClick={() => setMobileNavBarOpened(false)}>
-                Codle
+            <Link href="/Blog">
+              <a className="text-white hover:text-sky-500" aria-label="Blog" onClick={() => setMobileNavBarOpened(false)}>
+                Blog
               </a>
             </Link>
           </li>

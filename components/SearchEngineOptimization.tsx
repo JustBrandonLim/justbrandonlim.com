@@ -2,11 +2,11 @@ import { NextPage } from "next";
 import Head from "next/head";
 import SiteConfig from "../site.config";
 
-interface SearchEngineOptimization {
+interface SearchEngineOptimizationProps {
   displayFeaturedOnly?: boolean;
 }
 
-const SearchEngineOptimization: NextPage<SearchEngineOptimization> = (searchEngineOptimization) => {
+const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searchEngineOptimizationProps) => {
   return (
     <Head>
       <title>Brandon Lim</title>

@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const Codle: NextPage = () => {
+const Blog: NextPage = () => {
   return (
     <div className="min-h-screen">
       <section className="container max-w-2xl gap-5 p-5">
-        <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Codle</h1>
+        <h1 className="mb-5 text-3xl font-bold text-white md:text-5xl">Blog</h1>
         <p className="mb-5 text-slate-300">Coming soon!</p>
         <p className="text-slate-300">
           Click{" "}
@@ -21,4 +21,4 @@ const Codle: NextPage = () => {
   );
 };
 
-export default Codle;
+export default Blog;
