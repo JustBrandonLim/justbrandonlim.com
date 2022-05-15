@@ -27,7 +27,7 @@ const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searc
 
       <meta property="og:site_name" content={SiteConfig.title} key="og:site_name" />
 
-      <meta property="twitter:card" content="website" key="twitter:card" />
+      <meta property="twitter:card" content="summary" key="twitter:card" />
       <meta property="twitter:site" content={SiteConfig.twitterUsername} key="twitter:site" />
       <meta property="twitter:description" content={description} key="twitter:description" />
       <meta property="twitter:title" content={title} key="twitter:title" />
