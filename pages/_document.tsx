@@ -12,7 +12,7 @@ const Document = () => {
         <meta name="apple-mobile-web-app-title" content="JustBrandonLim" />
         <meta name="application-name" content="JustBrandonLim" />
         <meta name="msapplication-TileColor" content="#27272a" />
-        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="theme-color" content="#27272a" />
       </Head>
       <body className="font-rubik bg-zinc-800">
         <Main />

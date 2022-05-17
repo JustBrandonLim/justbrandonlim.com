@@ -10,7 +10,7 @@ interface SearchEngineOptimizationProps {
 }
 
 const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searchEngineOptimizationProps) => {
-  const title = searchEngineOptimizationProps.title ? searchEngineOptimizationProps.title + " - " + SiteConfig.title : SiteConfig.title;
+  const title = searchEngineOptimizationProps.title ? searchEngineOptimizationProps.title + " · " + SiteConfig.title : SiteConfig.title;
   const description = searchEngineOptimizationProps.description ? searchEngineOptimizationProps.description : SiteConfig.description;
   const url = searchEngineOptimizationProps.url ? SiteConfig.url + searchEngineOptimizationProps.url : SiteConfig.url;
   const image = searchEngineOptimizationProps.image ? SiteConfig.url + searchEngineOptimizationProps.image : SiteConfig.url + SiteConfig.image;
