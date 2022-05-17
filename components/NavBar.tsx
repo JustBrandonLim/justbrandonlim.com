@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@images/logo.png";
-import BrandonLim from "@images/brandon-lim.png";
 import React from "react";
 
 const NavBar: NextPage = () => {
@@ -135,7 +134,7 @@ const NavBar: NextPage = () => {
           </li>
           <hr className="text-white" />
           <li>
-            <Link href="/Blog">
+            <Link href="/blog">
               <a className="text-white hover:text-sky-500" aria-label="Blog" onClick={() => setMobileNavBarOpened(false)}>
                 Blog
               </a>
