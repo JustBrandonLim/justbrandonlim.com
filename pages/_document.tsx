@@ -14,7 +14,7 @@ const Document = () => {
         <meta name="msapplication-TileColor" content="#27272a" />
         <meta name="theme-color" content="#27272a" />
       </Head>
-      <body className="font-rubik bg-zinc-800">
+      <body className="bg-neutral-800 font-rubik">
         <Main />
         <NextScript />
       </body>

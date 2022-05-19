@@ -3,9 +3,9 @@ import Settings from "../site.config";
 
 const SocialsBar: NextPage = () => {
   return (
-    <div className="flex items-center justify-center gap-5 p-5">
+    <div className="flex items-center justify-center gap-5">
       <a
-        className="w-6 h-6 fill-white hover:fill-sky-500"
+        className="w-6 h-6 fill-black hover:fill-sky-500"
         href={Settings.socials.github}
         aria-label="GitHub"
         target="_blank"
@@ -17,7 +17,7 @@ const SocialsBar: NextPage = () => {
         </svg>
       </a>
       <a
-        className="w-6 h-6 fill-white hover:fill-sky-500"
+        className="w-6 h-6 fill-black hover:fill-sky-500"
         href={Settings.socials.twitter}
         aria-label="Twitter"
         target="_blank"
@@ -29,7 +29,7 @@ const SocialsBar: NextPage = () => {
         </svg>
       </a>
       <a
-        className="w-6 h-6 fill-white hover:fill-sky-500"
+        className="w-6 h-6 fill-black hover:fill-sky-500"
         href={Settings.socials.linkedin}
         aria-label="LinkedIn"
         target="_blank"
@@ -41,7 +41,7 @@ const SocialsBar: NextPage = () => {
         </svg>
       </a>
       <a
-        className="w-6 h-6 fill-white hover:fill-sky-500"
+        className="w-6 h-6 fill-black hover:fill-sky-500"
         href={Settings.socials.youtube}
         aria-label="YouTube"
         target="_blank"
