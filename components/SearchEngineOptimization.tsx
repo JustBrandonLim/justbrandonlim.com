@@ -10,7 +10,7 @@ interface SearchEngineOptimizationProps {
 }
 
 const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searchEngineOptimizationProps) => {
-  const title = searchEngineOptimizationProps.title ? searchEngineOptimizationProps.title + " · " + SiteConfig.title : SiteConfig.title;
+  const title = searchEngineOptimizationProps.title ? searchEngineOptimizationProps.title + " - " + SiteConfig.title : SiteConfig.title;
   const description = searchEngineOptimizationProps.description ? searchEngineOptimizationProps.description : SiteConfig.description;
   const url = searchEngineOptimizationProps.url ? SiteConfig.url + searchEngineOptimizationProps.url : SiteConfig.url;
   const image = searchEngineOptimizationProps.image ? SiteConfig.url + searchEngineOptimizationProps.image : SiteConfig.url + SiteConfig.image;
@@ -28,8 +28,8 @@ const SearchEngineOptimization: NextPage<SearchEngineOptimizationProps> = (searc
       <meta property="og:site_name" content={SiteConfig.title} key="og:site_name" />
       <meta property="og:description" content={description} key="og:description" />
 
-      <meta property="twitter:card" content="summary" key="twitter:card" />
-      <meta property="twitter:site" content={SiteConfig.twitterUsername} key="twitter:site" />
+      <meta property="twitter:card" content="summary_large_image" key="twitter:card" />
+      <meta property="twitter:site" content={"@" + SiteConfig.socials.twitter} key="twitter:site" />
       <meta property="twitter:description" content={description} key="twitter:description" />
       <meta property="twitter:title" content={title} key="twitter:title" />
       <meta property="twitter:image" content={image} key="twitter:image" />

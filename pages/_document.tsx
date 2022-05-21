@@ -11,8 +11,8 @@ const Document = () => {
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="apple-mobile-web-app-title" content="JustBrandonLim" />
         <meta name="application-name" content="JustBrandonLim" />
-        <meta name="msapplication-TileColor" content="#27272a" />
-        <meta name="theme-color" content="#27272a" />
+        <meta name="msapplication-TileColor" content="#262626" />
+        <meta name="theme-color" content="#262626" />
       </Head>
       <body className="bg-neutral-800 font-rubik">
         <Main />
