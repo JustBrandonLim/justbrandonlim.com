@@ -1,144 +1,83 @@
-import { NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "@images/logo.png";
+import type { NextPage } from "next";
 import React from "react";
+import NavItem from "@components/NavItem";
+import Icon from "@components/Icon";
 
 const NavBar: NextPage = () => {
-  const [mobileNavBarOpened, setMobileNavBarOpened] = React.useState<boolean>(false);
+  const [isMobileNavBarOpened, setMobileNavBarOpened] = React.useState<boolean>(false);
 
   return (
-    <nav>
-      <div className="container flex items-center justify-between max-w-3xl p-5">
-        <Link href="/">
-          <a>
-            <Image src={Logo} alt="Brandon Lim" layout="fixed" width={50} height={50} quality={100} placeholder="blur" />
-          </a>
-        </Link>
+    <nav className="container max-w-3xl">
+      <div className="flex items-center justify-between p-5">
         <button
-          onClick={() => setMobileNavBarOpened(!mobileNavBarOpened)}
-          className="inline-block md:hidden"
-          aria-label={mobileNavBarOpened ? "Close Navigation Bar" : "Open Navigation Bar"}
+          className="inline-block text-white md:hidden"
+          aria-label={isMobileNavBarOpened ? "Close NavBar" : "Open NavBar"}
+          onClick={() => setMobileNavBarOpened((isMobileNavBarOpened) => !isMobileNavBarOpened)}
         >
-          {mobileNavBarOpened ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
+          {isMobileNavBarOpened ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
         </button>
-        <ul className="hidden gap-5 md:flex">
+        <ul className="hidden md:flex md:gap-10">
           <li>
-            <Link href="/">
-              <a className="text-white hover:text-sky-500" aria-label="Home">
-                Home
-              </a>
-            </Link>
+            <NavItem href="/" aria-label="Home">
+              Home
+            </NavItem>
           </li>
           <li>
-            <Link href="/works">
-              <a className="text-white hover:text-sky-500" aria-label="Works">
-                Works
-              </a>
-            </Link>
+            <NavItem href="/works" aria-label="Works">
+              Works
+            </NavItem>
           </li>
           <li>
-            <Link href="/resume.pdf">
-              <a className="text-white hover:text-sky-500" aria-label="Resume" target="_blank" rel="noopener noreferrer">
-                Resume
-              </a>
-            </Link>
+            <NavItem href="/resume.pdf" aria-label="Resume" external={true}>
+              Resume
+            </NavItem>
           </li>
           <li>
-            <a
-              className="text-white hover:text-sky-500"
-              href="mailto:hello@justbrandonlim.com"
-              aria-label="Email"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <NavItem href="mailto:hello@justbrandonlim.com" aria-label="Contact" external={true}>
               Contact
-            </a>
-          </li>
-          <span className="text-white">|</span>
-          <li>
-            <Link href="/blog">
-              <a className="text-white hover:text-sky-500" aria-label="Blog">
-                Blog
-              </a>
-            </Link>
+            </NavItem>
           </li>
         </ul>
+        <Icon href="https://github.com/JustBrandonLim/justbrandonlim.com" aria-label="justbrandonlim.com on GitHub">
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>GitHub</title>
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </Icon>
       </div>
       <aside
         className={`${
-          mobileNavBarOpened ? "visible opacity-100" : "invisible opacity-0"
-        } transition-all ease-in-out duration-300 rounded-md bg-zinc-700 absolute right-5 z-10 md:hidden p-5 shadow-lg`}
+          isMobileNavBarOpened ? "visible opacity-100" : "invisible opacity-0"
+        } transition-all ease-in-out duration-300 rounded-md bg-neutral-700 absolute left-5 z-10 md:hidden p-5 shadow-lg`}
       >
-        <ul className="flex flex-col gap-5 md:hidden">
+        <ul className="flex flex-col gap-10">
           <li>
-            <Link href="/">
-              <a className="text-white hover:text-sky-500" aria-label="Home" onClick={() => setMobileNavBarOpened(false)}>
-                Home
-              </a>
-            </Link>
+            <NavItem href="/" aria-label="Home" onClick={setMobileNavBarOpened}>
+              Home
+            </NavItem>
           </li>
           <li>
-            <Link href="/works">
-              <a className="text-white hover:text-sky-500" aria-label="Works" onClick={() => setMobileNavBarOpened(false)}>
-                Works
-              </a>
-            </Link>
+            <NavItem href="/works" aria-label="Works" onClick={setMobileNavBarOpened}>
+              Works
+            </NavItem>
           </li>
           <li>
-            <Link href="/resume.pdf">
-              <a
-                className="text-white hover:text-sky-500"
-                aria-label="Resume"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileNavBarOpened(false)}
-              >
-                Resume
-              </a>
-            </Link>
+            <NavItem href="/resume.pdf" aria-label="Resume" external={true} onClick={setMobileNavBarOpened}>
+              Resume
+            </NavItem>
           </li>
           <li>
-            <a
-              className="text-white hover:text-sky-500"
-              href="mailto:hello@justbrandonlim.com"
-              aria-label="Email"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileNavBarOpened(false)}
-            >
+            <NavItem href="mailto:hello@justbrandonlim.com" aria-label="Contact" external={true} onClick={setMobileNavBarOpened}>
               Contact
-            </a>
-          </li>
-          <hr className="text-white" />
-          <li>
-            <Link href="/blog">
-              <a className="text-white hover:text-sky-500" aria-label="Blog" onClick={() => setMobileNavBarOpened(false)}>
-                Blog
-              </a>
-            </Link>
+            </NavItem>
           </li>
         </ul>
       </aside>

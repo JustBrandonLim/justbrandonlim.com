@@ -13,7 +13,7 @@ const Layout: NextPage<LayoutProps> = (layoutProps) => {
       <header>
         <NavBar />
       </header>
-      <main>{layoutProps.children}</main>
+      <main className="min-h-screen">{layoutProps.children}</main>
       <footer>
         <Footer />
       </footer>
