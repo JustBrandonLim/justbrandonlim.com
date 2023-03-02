@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script";
 import NavigationBar from "@components/navigation-bar";
 import Footer from "@components/footer";
 import { Lexend, Literata, JetBrains_Mono } from "next/font/google";

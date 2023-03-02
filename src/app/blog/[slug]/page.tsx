@@ -2,7 +2,7 @@ import "./post.css";
 import { getAllBlogPosts, getBlogPostByUrl } from "@utilities/blog";
 import BrandonLim from "@public/brandon-lim.png";
 import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import MDX from "@components/blog-post/mdx";
 
 type generateMetadata = {
   params: { slug: string };
@@ -29,9 +29,7 @@ type Post = {
 export default function Post(props: Post) {
   const post = getBlogPostByUrl(props.params.slug);
 
-  if (!post) return <p>Error occured!</p>;
-
-  const MDXContent = useMDXComponent(post.body.code);
+  if (!post) return <p>An error has occured!</p>;
 
   return (
     <section className="flex flex-col gap-10">
@@ -46,7 +44,7 @@ export default function Post(props: Post) {
       <p>{post.description}</p>
       <hr />
       <article className="max-w-3xl prose prose-lg font-literata prose-slate prose-code:font-jetbrains-mono">
-        <MDXContent components={{ Image }} />
+        <MDX code={post.body.code} components={{ Image }} />
       </article>
       <hr />
       <p>Enjoyed reading this article? Share it!</p>
