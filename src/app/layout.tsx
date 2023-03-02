@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-SG">
       <body
         className={`${lexend.variable} ${literata.variable} ${jetbrains_mono.variable} font-lexend bg-slate-100 text-slate-600 antialiased max-w-3xl mx-auto min-h-screen flex flex-col gap-10 p-5`}
       >

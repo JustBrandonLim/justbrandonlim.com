@@ -54,7 +54,7 @@ export default function NavigationBar() {
           </svg>
         )}
       </button>
-      {mobileNavigationBarOpened ? (
+      {mobileNavigationBarOpened && (
         <ul className="absolute flex flex-col gap-5 p-5 bg-white border rounded-lg shadow-lg top-20 right-5 border-slate-200">
           <li>
             <NavigationBarItem url="/portfolio" aria-label="Portfolio" onClick={handleMobileNavigationClick}>
@@ -72,7 +72,7 @@ export default function NavigationBar() {
             </NavigationBarItem>
           </li>
         </ul>
-      ) : null}
+      )}
     </nav>
   );
 }

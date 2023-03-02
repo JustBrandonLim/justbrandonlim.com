@@ -11,7 +11,7 @@ type NavigationBarItem = {
 export default function NavgiationBarItem(props: NavigationBarItem) {
   return (
     <Link
-      className="transition-colors duration-150 ease-in-out hover:text-indigo-700"
+      className="transition-colors duration-150 ease-in-out hover:text-black"
       href={props.url}
       aria-label={props["aria-label"]}
       onClick={props.onClick}

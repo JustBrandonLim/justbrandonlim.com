@@ -13,7 +13,7 @@ export default function PortfolioCard(props: PortfolioCard) {
       <h3 className="text-lg font-bold text-black">{props.title}</h3>
       <p>{props.description}</p>
       <div className="flex flex-col items-start gap-5 mt-auto">
-        {props.github ? (
+        {props.github && (
           <a
             className="flex items-center justify-between gap-5 p-3 text-white duration-150 ease-in-out bg-indigo-700 rounded-lg hover:bg-indigo-700/80 transform-colors"
             href={props.github}
@@ -30,7 +30,7 @@ export default function PortfolioCard(props: PortfolioCard) {
               />
             </svg>
           </a>
-        ) : null}
+        )}
         <div className="flex flex-wrap items-center gap-5">
           {props.stack.map((stack, i) => {
             return <Label key={i} text={stack} />;

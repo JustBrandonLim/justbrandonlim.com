@@ -7,7 +7,7 @@ type SocialIcon = {
 export default function SocialIcon(props: SocialIcon) {
   return (
     <a
-      className="duration-150 ease-in-out fill-slate-600 hover:fill-indigo-700 transform-colors"
+      className="duration-150 ease-in-out fill-slate-600 hover:fill-black transform-colors"
       href={props.href}
       aria-label={props.title}
       target="_blank"
