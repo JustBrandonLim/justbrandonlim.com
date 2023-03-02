@@ -1,0 +1,103 @@
+---
+title: "How to create a dynamic sitemap in Next.js 13.2"
+date: "2023-03-02"
+description: "In this blog post, I will be going through how to create a dynamic sitemap for your website built with Next.js 13.2."
+tags: ["tutorial", "next.js"]
+---
+
+## What is a sitemap?
+
+A sitemap is commonly used for search engines to see the structure and find the content of your website.
+
+It helps boost your website's SEO by:
+
+1. Helping search engine crawlers find all the pages of your website.
+2. Helping search engine crawlers understand the hierarchy of your website.
+3. Provide metadata to search engine crawlers such as when it was last updated and how frequently
+   it changes.
+
+## How do we do it?
+
+In **[Next.js 13.2](https://nextjs.org/blog/next-13-2)**, it was announced on their blog that
+**[Route Handlers](https://nextjs.org/blog/next-13-2#custom-route-handlers)** are now supported for
+the App Router (`app`).
+
+We can take advantage of this to help us create a dynamic sitemap for your website, especially
+if your website contains a blog which has posts/pages that are constantly changing as you write
+new blog posts.
+
+An example of this would be my personal website, [https://justbrandonlim.com](https://justbrandonlim.com),
+which has a blog. You could be editing the sitemaps manually if your website is still small, but what
+happens when your website gets significantly larger where you begin to lose track of what blog posts
+you have?
+
+### Creating your Route Handler
+
+In your `app` directory, create a folder called `sitemap.xml`. This tells Next.js that you are defining
+a route to `https://yourwebsite.com/sitemap.xml`.
+
+<Image
+  src="/images/how-to-create-a-dynamic-sitemap-in-next-js-13-2/defining-a-route.png"
+  alt="Defining a Route"
+  className="rounded-lg shadow-lg"
+  width={250}
+  height={250}
+/>
+
+Next, you will want to add a `GET` request handler by creating a file inside the newly created folder
+called `route.js` or `route.ts`.
+
+```javascript title="./sitemap.xml/route.js" showLineNumbers
+export async function GET(request) {
+  return Response.json({ name: "John Doe" });
+}
+```
+
+```typescript title="./sitemap.xml/route.ts" showLineNumbers
+export async function GET(request: NextRequest) {
+  return NextResponse.json({ name: "John Doe" });
+}
+```
+
+Now, if you access `localhost:3000/sitemap.xml`, you should see a JSON response with `name: "John Doe"`.
+
+## Generating the sitemap
+
+To generate the sitemap, let's create the schema first.
+
+```javascript title="Starting of the sitemap"
+const sitemapStart = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+```
+
+```javascript title="Ending of the sitemap"
+const sitemapEnd = `</urlset>`;
+```
+
+Next, we define the static URLs that you already know beforehand.
+
+```javascript title="Static section of the sitemap"
+const sitemapStatic = `
+    <url>
+      <loc>https://www.justbrandonlim.com/</loc>
+      <lastmod>2023-02-27</lastmod>
+    </url>
+    <url>
+      <loc>https://www.justbrandonlim.com/portfolio</loc>
+      <lastmod>2023-03-01</lastmod>
+    </url>
+    <url>
+      <loc>https://www.justbrandonlim.com/blog</loc>
+      <lastmod>2023-03-01</lastmod>
+    </url>
+    <url>
+      <loc>https://www.justbrandonlim.com/uses</loc>
+      <lastmod>2023-03-01</lastmod>
+    </url>
+    <url>
+      <loc>https://www.justbrandonlim.com/resume.pdf</loc>
+      <lastmod>2023-03-01</lastmod>
+    </url>
+  `;
+```
+
+The last few parts would be to read the

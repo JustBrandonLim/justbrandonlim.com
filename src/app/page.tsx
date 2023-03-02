@@ -1,91 +1,45 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import BrandonLim from "@public/brandon-lim.png";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <section className="flex flex-col gap-10">
+      <div className="flex flex-wrap items-center justify-between gap-5">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1 className="text-3xl font-bold text-black md:text-4xl md:animate-bounce">Brandon Lim Jing Zhi</h1>
+          <p>Software Engineer</p>
         </div>
-      </div>
-
-      <div className={styles.center}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className="w-24 h-24 rounded-full shadow-lg sm:w-56 sm:h-56"
+          src={BrandonLim}
+          alt="Brandon Lim"
+          placeholder="blur"
+          width={250}
+          height={250}
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <p>
+        Hey there! I&apos;m Brandon Lim Jing Zhi, and I&apos;m currently a student at the Singapore Institute of Technology, pursuing my degree in BE
+        in Information and Communications Technology (Software Engineering). I fell in love with programming at the age of 12 when I got my first
+        computer. Ever since then, I have been honing my skills. I am passionate about creating innovative solutions that make people&apos;s lives
+        easier.
+      </p>
+      <p>
+        In my free time, I occasionally work on my own ideas that I think are innovative to further my skills. Usually, if I am not programming, you
+        can find me at the gym working out or staying at home playing my favourite video games.
+      </p>
+      {/*
+      <p>
+        Hey there! I&apos;m Brandon Lim Jing Zhi, and I&apos;m a software engineer with a passion for creating innovative solutions that make
+        people&apos;s lives easier. With a strong foundation in a variety of programming languages and frameworks, I&apos;m excited to tackle new
+        challenges and collaborate with others to build amazing things.
+      </p>
+      <p>
+        As a technology enthusiast with a passion for programming, I have always been fascinated by the way software and hardware interact to create
+        amazing things. My love for programming started in my teenage years at the age of 12 when I began tinkering with computers and exploring
+        programming languages. From then on, I was hooked, and I have been honing my skills ever since. When I'm not coding, you can find me in the
+        gym working up a sweat or immersing myself in the latest video games.
+      </p>*/}
+    </section>
+  );
 }
