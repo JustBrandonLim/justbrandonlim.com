@@ -17,7 +17,7 @@ export default function PortfolioCard(props: PortfolioCard) {
           <a
             className="flex items-center justify-between gap-5 p-3 text-white duration-150 ease-in-out bg-indigo-700 rounded-lg hover:bg-indigo-700/80 transform-colors"
             href={props.github}
-            aria-label={props.title}
+            aria-label="View on GitHub"
             target="_blank"
             rel="noopener noreferrer"
           >

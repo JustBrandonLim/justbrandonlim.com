@@ -21,7 +21,7 @@ export default function BlogPostCard(props: BlogPostCard) {
         <Link
           className="flex items-center justify-between gap-5 p-3 text-white duration-150 ease-in-out bg-indigo-700 rounded-lg hover:bg-indigo-700/80 transform-colors"
           href={props.href}
-          aria-label={props.title}
+          aria-label="Read more"
         >
           Read more
           <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
