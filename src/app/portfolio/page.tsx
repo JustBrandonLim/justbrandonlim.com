@@ -3,7 +3,7 @@ import { PortfolioData } from "@data/portfolio";
 import PortfolioCard from "@components/portfolio-card";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Brandon Lim Jing Zhi",
+  title: "Portfolio",
   description: "Discover some of my best works that I have accomplished.",
 };
 

@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
       </url>
     `;
 
-    const url = `https://justbrandonlim.com${blogPost.slug}`;
+    const url = `https://justbrandonlim.com/blog/${blogPost.slug}`;
     const date = blogPost.date;
 
     return template.replace("URL", url).replace("DATE", date);

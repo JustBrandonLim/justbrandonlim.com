@@ -8,6 +8,6 @@ export function getAllBlogPosts() {
 
 export function getBlogPostByUrl(url: string) {
   return allBlogPosts.find((blogPost) => {
-    return blogPost.slug == `/blog/${url}`;
+    return blogPost.slug === url;
   });
 }

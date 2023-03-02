@@ -9,7 +9,7 @@ import NavigationBarItem from "@components/navigation-bar-item";
 export default function NavigationBar() {
   const [mobileNavigationBarOpened, setMobileNavigationBarOpened] = useState(false);
 
-  function handleMobileNavigationClicked() {
+  function handleMobileNavigationClick() {
     setMobileNavigationBarOpened(false);
   }
 
@@ -57,17 +57,17 @@ export default function NavigationBar() {
       {mobileNavigationBarOpened ? (
         <ul className="absolute flex flex-col gap-5 p-5 bg-white border rounded-lg shadow-lg top-20 right-5 border-slate-200">
           <li>
-            <NavigationBarItem url="/portfolio" aria-label="Portfolio">
+            <NavigationBarItem url="/portfolio" aria-label="Portfolio" onClick={handleMobileNavigationClick}>
               Portfolio
             </NavigationBarItem>
           </li>
           <li>
-            <NavigationBarItem url="/blog" aria-label="Blog">
+            <NavigationBarItem url="/blog" aria-label="Blog" onClick={handleMobileNavigationClick}>
               Blog
             </NavigationBarItem>
           </li>
           <li>
-            <NavigationBarItem url="/uses" aria-label="Uses">
+            <NavigationBarItem url="/uses" aria-label="Uses" onClick={handleMobileNavigationClick}>
               Uses
             </NavigationBarItem>
           </li>

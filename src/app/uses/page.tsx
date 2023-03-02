@@ -3,7 +3,7 @@ import { UsesData } from "@data/uses";
 import UseCard from "@components/use-card";
 
 export const metadata: Metadata = {
-  title: "Uses - Brandon Lim Jing Zhi",
+  title: "Uses",
   description: "View my curated collection of hardware, software and equipments that I use daily.",
 };
 

@@ -3,7 +3,7 @@ import { getAllBlogPosts } from "@utilities/blog";
 import BlogPostCard from "@components/blog-post-card";
 
 export const metadata: Metadata = {
-  title: "Blog - Brandon Lim Jing Zhi",
+  title: "Blog",
   description: "Explore my blog where I share my thoughts, ideas and experiences with the world.",
 };
 
@@ -22,7 +22,7 @@ export default function Blog() {
               title={blogPost.title}
               date={blogPost.date}
               description={blogPost.description}
-              href={blogPost.slug}
+              slug={blogPost.slug}
               tags={blogPost.tags}
             />
           );

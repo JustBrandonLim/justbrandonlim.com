@@ -5,7 +5,7 @@ type BlogPostCard = {
   title: string;
   date: string;
   description: string;
-  href: string;
+  slug: string;
   tags: string[];
 };
 
@@ -20,7 +20,7 @@ export default function BlogPostCard(props: BlogPostCard) {
       <div className="flex flex-col items-start gap-5 mt-auto">
         <Link
           className="flex items-center justify-between gap-5 p-3 text-white duration-150 ease-in-out bg-indigo-700 rounded-lg hover:bg-indigo-700/80 transform-colors"
-          href={props.href}
+          href={`/blog/${props.slug}`}
           aria-label="Read more"
         >
           Read more

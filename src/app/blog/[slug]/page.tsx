@@ -1,4 +1,5 @@
 import "./post.css";
+import type { Metadata } from "next";
 import { getAllBlogPosts, getBlogPostByUrl } from "@utilities/blog";
 import BrandonLim from "@public/brandon-lim.png";
 import Image from "next/image";
@@ -9,10 +10,28 @@ type generateMetadata = {
   params: { slug: string };
 };
 
-export async function generateMetadata(props: generateMetadata) {
+export async function generateMetadata(props: generateMetadata): Promise<Metadata | undefined> {
   const post = getBlogPostByUrl(props.params.slug);
 
-  if (post) return { title: `${post.title} - Brandon Lim`, description: post.description };
+  if (post)
+    return {
+      title: post.title,
+      description: post.description,
+      openGraph: {
+        type: "article",
+        title: post.title,
+        url: `https://justbrandonlim.com/blog/${post.slug}`,
+        description: post.description,
+
+        images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description: post.description,
+        images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+      },
+    };
 }
 
 export async function generateStaticParams() {

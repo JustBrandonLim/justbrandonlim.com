@@ -9,9 +9,28 @@ const literata = Literata({ subsets: ["latin"], variable: "--font-literata" });
 const jetbrains_mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-  title: "Brandon Lim Jing Zhi",
+  title: {
+    default: "Brandon Lim Jing Zhi",
+    template: "%s - Brandon Lim Jing Zhi",
+  },
   description:
     "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+  openGraph: {
+    type: "website",
+    title: "Brandon Lim Jing Zhi",
+    url: `https://justbrandonlim.com/`,
+    siteName: "Brandon Lim Jing Zhi",
+    description:
+      "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+    images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brandon Lim Jing Zhi",
+    description:
+      "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+    images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+  },
   robots: {
     index: true,
     follow: true,
