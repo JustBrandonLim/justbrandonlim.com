@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         lexend: ["var(--font-lexend)", ...defaultTheme.fontFamily.sans],
         literata: ["var(--font-literata)", ...defaultTheme.fontFamily.serif],
-        "jetbrains-mono": ["var(--font-jetbrains-mono)", ...defaultTheme.fontFamily.mono],
+        "fira-code": ["var(--font-fira-code)", ...defaultTheme.fontFamily.mono],
       },
     },
   },

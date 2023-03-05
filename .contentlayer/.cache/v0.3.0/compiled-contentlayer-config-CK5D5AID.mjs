@@ -43,7 +43,7 @@ var contentlayer_config_default = makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark-dimmed",
+          theme: "github-dark",
           keepBackground: true,
           onVisitLine(node) {
             if (node.children.length === 0) {
@@ -65,4 +65,4 @@ export {
   BlogPost,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-O5UYQEBY.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-CK5D5AID.mjs.map

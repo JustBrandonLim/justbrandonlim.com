@@ -63,7 +63,7 @@ export default function Post(props: Post) {
       </div>
       <p>{post.description}</p>
       <hr />
-      <article className="max-w-3xl prose prose-lg font-literata prose-slate prose-code:font-jetbrains-mono">
+      <article className="max-w-3xl prose prose-lg font-literata prose-slate prose-code:font-fira-code">
         <MDX code={post.body.code} components={{ Image }} />
       </article>
       <hr />

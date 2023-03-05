@@ -35,7 +35,11 @@ export default function NavigationBar() {
           </NavigationBarItem>
         </li>
       </ul>
-      <button className="text-black md:hidden" onClick={() => setMobileNavigationBarOpened(!mobileNavigationBarOpened)}>
+      <button
+        className="text-black md:hidden"
+        aria-label={mobileNavigationBarOpened ? "Close Navigation Menu" : "Open Navigation Menu"}
+        onClick={() => setMobileNavigationBarOpened(!mobileNavigationBarOpened)}
+      >
         {mobileNavigationBarOpened ? (
           <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path

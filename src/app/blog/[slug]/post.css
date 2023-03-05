@@ -23,7 +23,7 @@
 }
 
 [data-rehype-pretty-code-title] {
-  @apply px-4 py-3 font-jetbrains-mono text-xs border rounded-t-lg text-neutral-200 border-[#2d333b] bg-[#2d333b];
+  @apply px-4 py-3 font-fira-code text-xs border rounded-t-lg text-neutral-200 border-[#2d333b] bg-[#2d333b];
 }
 
 [data-rehype-pretty-code-title] + pre {

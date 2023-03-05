@@ -2,11 +2,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 import NavigationBar from "@components/navigation-bar";
 import Footer from "@components/footer";
-import { Lexend, Literata, JetBrains_Mono } from "next/font/google";
+import { Lexend, Literata, Fira_Code } from "next/font/google";
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 const literata = Literata({ subsets: ["latin"], variable: "--font-literata" });
-const jetbrains_mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
+const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-fira-code" });
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-SG">
       <body
-        className={`${lexend.variable} ${literata.variable} ${jetbrains_mono.variable} font-lexend bg-slate-100 text-slate-600 antialiased max-w-3xl mx-auto min-h-screen flex flex-col gap-10 p-5`}
+        className={`${lexend.variable} ${literata.variable} ${firaCode.variable} font-lexend bg-slate-100 text-slate-600 antialiased max-w-3xl mx-auto min-h-screen flex flex-col gap-10 p-5`}
       >
         <header>
           <NavigationBar />

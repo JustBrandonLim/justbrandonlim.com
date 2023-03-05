@@ -28,18 +28,19 @@ export default function Home() {
         In my free time, I occasionally work on my own ideas that I think are innovative to further my skills. Usually, if I am not programming, you
         can find me at the gym working out or staying at home playing my favourite video games.
       </p>
-      {/*
       <p>
-        Hey there! I&apos;m Brandon Lim Jing Zhi, and I&apos;m a software engineer with a passion for creating innovative solutions that make
-        people&apos;s lives easier. With a strong foundation in a variety of programming languages and frameworks, I&apos;m excited to tackle new
-        challenges and collaborate with others to build amazing things.
+        If you are interested in learning more about me, do check out my{" "}
+        <a
+          className="underline transition-colors duration-150 ease-in-out hover:text-black"
+          href="/resume.pdf"
+          aria-label="Resume"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          resume
+        </a>
+        !
       </p>
-      <p>
-        As a technology enthusiast with a passion for programming, I have always been fascinated by the way software and hardware interact to create
-        amazing things. My love for programming started in my teenage years at the age of 12 when I began tinkering with computers and exploring
-        programming languages. From then on, I was hooked, and I have been honing my skills ever since. When I'm not coding, you can find me in the
-        gym working up a sweat or immersing myself in the latest video games.
-      </p>*/}
     </section>
   );
 }

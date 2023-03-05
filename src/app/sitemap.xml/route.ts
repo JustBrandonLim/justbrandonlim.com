@@ -6,23 +6,23 @@ export async function GET(request: NextRequest) {
   const sitemapEnd = `</urlset>`;
   const sitemapStatic = `
     <url>
-      <loc>https://www.justbrandonlim.com/</loc>
+      <loc>https://justbrandonlim.com/</loc>
       <lastmod>2023-02-27</lastmod>
     </url>
     <url>
-      <loc>https://www.justbrandonlim.com/portfolio</loc>
+      <loc>https://justbrandonlim.com/portfolio</loc>
       <lastmod>2023-03-01</lastmod>
     </url>
     <url>
-      <loc>https://www.justbrandonlim.com/blog</loc>
+      <loc>https://justbrandonlim.com/blog</loc>
       <lastmod>2023-03-01</lastmod>
     </url>
     <url>
-      <loc>https://www.justbrandonlim.com/uses</loc>
+      <loc>https://justbrandonlim.com/uses</loc>
       <lastmod>2023-03-01</lastmod>
     </url>
     <url>
-      <loc>https://www.justbrandonlim.com/resume.pdf</loc>
+      <loc>https://justbrandonlim.com/resume.pdf</loc>
       <lastmod>2023-03-01</lastmod>
     </url>
   `;

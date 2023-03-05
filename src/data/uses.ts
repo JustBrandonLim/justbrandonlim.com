@@ -13,7 +13,7 @@ export const UsesData = [
     ],
   },
   {
-    title: "Office",
+    title: "Workspace",
     items: [
       {
         subtitle: "Desk",

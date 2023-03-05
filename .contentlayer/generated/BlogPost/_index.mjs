@@ -2,5 +2,6 @@
 
 import _5UsefulResourcesForWebDevelopersMdx from './_5-useful-resources-for-web-developers.mdx.json' assert { type: 'json' }
 import helloWorldMdx from './hello-world.mdx.json' assert { type: 'json' }
+import testMdx from './test.mdx.json' assert { type: 'json' }
 
-export const allBlogPosts = [_5UsefulResourcesForWebDevelopersMdx, helloWorldMdx]
+export const allBlogPosts = [_5UsefulResourcesForWebDevelopersMdx, helloWorldMdx, testMdx]
