@@ -5,6 +5,7 @@ import BrandonLim from "@public/brandon-lim.png";
 import Image from "next/image";
 import MDX from "@components/blog-post/mdx";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type generateMetadata = {
   params: { slug: string };
@@ -49,7 +50,7 @@ type Post = {
 export default function Post(props: Post) {
   const post = getBlogPostByUrl(props.params.slug);
 
-  if (!post) return <p>An error has occured!</p>;
+  if (!post) notFound();
 
   return (
     <section className="flex flex-col gap-10">
@@ -63,7 +64,7 @@ export default function Post(props: Post) {
       </div>
       <p>{post.description}</p>
       <hr />
-      <article className="max-w-3xl prose prose-lg font-literata prose-slate prose-code:font-fira-code">
+      <article className="max-w-3xl prose prose-lg prose-slate prose-code:font-fira-code">
         <MDX code={post.body.code} components={{ Image }} />
       </article>
       <hr />

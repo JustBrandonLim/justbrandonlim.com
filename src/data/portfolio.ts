@@ -15,7 +15,7 @@ export const PortfolioData = [
   {
     title: "justbrandonlim.com",
     description:
-      "justbrandonlim.com showcases my various projects and skills in software engineering, web design, and development. It has gone through multiple iterations to present my work in the best possible way.",
+      "justbrandonlim.com showcases my various projects and skills in software engineering, web design, and development work. It has gone through multiple iterations to present my work in the best possible way.",
     stack: ["TypeScript", "Next.js", "TailwindCSS"],
     github: "https://github.com/JustBrandonLim/justbrandonlim.com",
   },

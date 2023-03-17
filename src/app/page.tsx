@@ -29,7 +29,7 @@ export default function Home() {
         can find me at the gym working out or staying at home playing my favourite video games.
       </p>
       <p>
-        If you are interested in learning more about me, do check out my{" "}
+        If you are interested in learning more about me, feel free to check out my{" "}
         <a
           className="underline transition-colors duration-150 ease-in-out hover:text-black"
           href="/resume.pdf"
