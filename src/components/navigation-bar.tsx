@@ -11,7 +11,7 @@ export default function NavigationBar() {
         <Image className="w-6 h-6 shadow-lg" src={Favicon} alt="Favicon" width={50} height={50} />
       </Link>
       <MobileNavigationBar />
-      <ul className="items-center hidden gap-5 md:flex">
+      <ul className="items-center hidden gap-10 md:flex">
         <li>
           <NavigationBarItem url="/portfolio" aria-label="Portfolio">
             Portfolio

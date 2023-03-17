@@ -1,10 +1,10 @@
-type UseCard = {
+interface UseCard {
   title: string;
   items: {
     subtitle: string;
     contents: string[];
   }[];
-};
+}
 
 export default function UseCard(props: UseCard) {
   return (

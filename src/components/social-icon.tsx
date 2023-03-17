@@ -1,8 +1,8 @@
-type SocialIcon = {
+interface SocialIcon {
   href: string;
   title: string;
   children: React.ReactNode;
-};
+}
 
 export default function SocialIcon(props: SocialIcon) {
   return (
