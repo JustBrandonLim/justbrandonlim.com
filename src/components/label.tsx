@@ -7,7 +7,7 @@ export default function Label(props: Label) {
   return (
     <div className="flex items-center gap-2 p-2 text-xs text-black rounded-lg bg-slate-100">
       {props.type == "stack" ? (
-        <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+        <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <title>Stack</title>
           <path
             fillRule="evenodd"
