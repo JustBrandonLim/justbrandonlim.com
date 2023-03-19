@@ -14,7 +14,7 @@ export default function NavigationBarItem(props: NavigationBarItem) {
 
   return (
     <Link
-      className={`transition-colors duration-150 ease-in-out ${currentRoute == props.url ? "text-black" : "hover:text-black"}`}
+      className={`transition-colors duration-150 ease-in-out ${currentRoute.startsWith(props.url) ? "text-black" : "hover:text-black"}`}
       href={props.url}
       aria-label={props["aria-label"]}
     >

@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     siteName: "Brandon Lim Jing Zhi",
     description:
       "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
-    images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+    images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Brandon Lim Jing Zhi",
     description:
       "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
-    images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+    images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
   },
   robots: {
     index: true,

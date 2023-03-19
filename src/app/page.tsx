@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BrandonLim from "@public/brandon-lim.png";
+import BrandonLimJingZhi from "@public/brandon-lim-jing-zhi.png";
 
 export default function Home() {
   return (
@@ -11,8 +11,8 @@ export default function Home() {
         </div>
         <Image
           className="w-24 h-24 rounded-full shadow-lg sm:w-56 sm:h-56"
-          src={BrandonLim}
-          alt="Brandon Lim"
+          src={BrandonLimJingZhi}
+          alt="Brandon Lim Jing Zhi"
           placeholder="blur"
           width={250}
           height={250}

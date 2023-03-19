@@ -3,6 +3,7 @@ import Image from "next/image";
 import Favicon from "@public/favicon.ico";
 import MobileNavigationBar from "@components/mobile-navigation-bar";
 import NavigationBarItem from "@components/navigation-bar-item";
+import SubNavigationBar from "@components/sub-navigation-bar";
 
 export default function NavigationBar() {
   return (
@@ -27,6 +28,9 @@ export default function NavigationBar() {
             Uses
           </NavigationBarItem>
         </li>
+        {/*<li className="relative">
+          <SubNavigationBar />
+  </li>*/}
       </ul>
     </nav>
   );

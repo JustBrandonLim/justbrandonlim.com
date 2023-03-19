@@ -1,7 +1,7 @@
 import "./post.css";
 import type { Metadata } from "next";
 import { getAllBlogPosts, getBlogPostByUrl } from "@utilities/blog";
-import BrandonLim from "@public/brandon-lim.png";
+import BrandonLimJingZhi from "@public/brandon-lim-jing-zhi.png";
 import Image from "next/image";
 import MDX from "@components/blog-post/mdx";
 import Link from "next/link";
@@ -24,13 +24,13 @@ export async function generateMetadata(props: generateMetadata): Promise<Metadat
         url: `https://justbrandonlim.com/blog/${post.slug}`,
         description: post.description,
 
-        images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+        images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
       },
       twitter: {
         card: "summary_large_image",
         title: post.title,
         description: post.description,
-        images: [{ url: "https://justbrandonlim.com/brandon-lim.png" }],
+        images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
       },
     };
 }
@@ -56,7 +56,7 @@ export default function Post(props: Post) {
     <section className="flex flex-col gap-10">
       <h1 className="text-3xl font-bold text-black md:text-4xl">{post.title}</h1>
       <div className="flex flex-wrap items-center gap-5">
-        <Image className="rounded-full shadow-lg" src={BrandonLim} alt="Brandon Lim" width={50} height={50} />
+        <Image className="rounded-full shadow-lg" src={BrandonLimJingZhi} alt="Brandon Lim Jing Zhi" width={50} height={50} />
         <div>
           <p className="font-bold text-black">Brandon Lim Jing Zhi</p>
           <p>{post.date}</p>
