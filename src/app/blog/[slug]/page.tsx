@@ -23,7 +23,6 @@ export async function generateMetadata(props: generateMetadata): Promise<Metadat
         title: post.title,
         url: `https://justbrandonlim.com/blog/${post.slug}`,
         description: post.description,
-
         images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
       },
       twitter: {
