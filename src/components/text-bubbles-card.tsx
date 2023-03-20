@@ -49,6 +49,7 @@ export default function TextBubblesCard() {
         } min-w-[5rem] w-fit break-words max-w-lg whitespace-pre-wrap p-3 opacity-0 bg-white rounded-bl-none rounded-lg outline-none`}
         id="text-input"
         contentEditable="true"
+        spellCheck="false"
         onInput={(event) => handleInput(event)}
         onKeyDown={(event) => handleKeyDown(event)}
       />
