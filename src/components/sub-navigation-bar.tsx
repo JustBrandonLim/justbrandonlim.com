@@ -6,10 +6,10 @@ import NavigationBarItem from "@components/navigation-bar-item";
 export default function SubNavigationBar() {
   const [isOpened, setIsOpened] = useState(false);
 
-  function handleGlobalClick() {
+  const handleGlobalClick = () => {
     setIsOpened(false);
     document.removeEventListener("click", handleGlobalClick);
-  }
+  };
 
   useEffect(() => {
     if (isOpened) document.addEventListener("click", handleGlobalClick);
@@ -32,10 +32,15 @@ export default function SubNavigationBar() {
         </svg>
       </button>
       {isOpened && (
-        <ul className="absolute flex flex-col gap-10 p-5 bg-white border rounded-lg shadow-lg border-slate-200 top-[3.75rem] right-0">
+        <ul className="absolute flex whitespace-nowrap flex-col gap-10 p-5 bg-white border rounded-lg shadow-lg border-slate-200 top-[3.75rem] right-0">
           <li>
-            <NavigationBarItem url="/links" aria-label="Links">
-              Links
+            <NavigationBarItem url="/others/advocates" aria-label="Advocates">
+              Advocates
+            </NavigationBarItem>
+          </li>
+          <li>
+            <NavigationBarItem url="/others/text-bubbles" aria-label="Text Bubbles">
+              Text Bubbles
             </NavigationBarItem>
           </li>
         </ul>

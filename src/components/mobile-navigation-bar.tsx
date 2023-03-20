@@ -6,10 +6,10 @@ import NavigationBarItem from "@components/navigation-bar-item";
 export default function MobileNavigationBar() {
   const [isOpened, setIsOpened] = useState(false);
 
-  function handleGlobalClick() {
+  const handleGlobalClick = () => {
     setIsOpened(false);
     document.removeEventListener("click", handleGlobalClick);
-  }
+  };
 
   useEffect(() => {
     if (isOpened) document.addEventListener("click", handleGlobalClick);
@@ -59,12 +59,17 @@ export default function MobileNavigationBar() {
               Uses
             </NavigationBarItem>
           </li>
-          {/*<hr />
+          <hr />
           <li>
-            <NavigationBarItem url="/links" aria-label="Links">
-              Links
+            <NavigationBarItem url="/others/advocates" aria-label="Advocates">
+              Advocates
             </NavigationBarItem>
-      </li>*/}
+          </li>
+          <li>
+            <NavigationBarItem url="/others/text-bubbles" aria-label="Text Bubbles">
+              Text Bubbles
+            </NavigationBarItem>
+          </li>
         </ul>
       )}
     </>

@@ -28,9 +28,9 @@ export default function NavigationBar() {
             Uses
           </NavigationBarItem>
         </li>
-        {/*<li className="relative">
+        <li className="relative">
           <SubNavigationBar />
-  </li>*/}
+        </li>
       </ul>
     </nav>
   );

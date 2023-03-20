@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getAllBlogPosts, getBlogPostByUrl } from "@utilities/blog";
 import BrandonLimJingZhi from "@public/brandon-lim-jing-zhi.png";
 import Image from "next/image";
-import MDX from "@components/blog-post/mdx";
+import MDX from "@components/mdx";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
