@@ -25,6 +25,14 @@ export async function GET() {
       <loc>https://justbrandonlim.com/resume.pdf</loc>
       <lastmod>2023-03-01</lastmod>
     </url>
+    <url>
+      <loc>https://justbrandonlim.com/others/advocates</loc>
+      <lastmod>2023-03-21</lastmod>
+    </url>
+    <url>
+      <loc>https://justbrandonlim.com/others/text-bubbles</loc>
+      <lastmod>2023-03-21</lastmod>
+    </url>
   `;
 
   const blogPosts = getAllBlogPosts();
