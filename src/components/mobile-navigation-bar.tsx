@@ -59,7 +59,7 @@ export default function MobileNavigationBar() {
               Uses
             </NavigationBarItem>
           </li>
-          <hr />
+          {/*<hr />
           <li>
             <NavigationBarItem url="/others/advocates" aria-label="Advocates">
               Advocates
@@ -69,7 +69,7 @@ export default function MobileNavigationBar() {
             <NavigationBarItem url="/others/text-bubbles" aria-label="Text Bubbles">
               Text Bubbles
             </NavigationBarItem>
-          </li>
+          </li>*/}
         </ul>
       )}
     </>

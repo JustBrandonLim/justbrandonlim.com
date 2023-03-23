@@ -19,10 +19,9 @@ export default function Home() {
         />
       </div>
       <p>
-        Hey there! I&apos;m Brandon Lim Jing Zhi, and I&apos;m currently a student at the Singapore Institute of Technology, pursuing my degree in BE
-        in Information and Communications Technology (Software Engineering). I fell in love with programming at the age of 12 when I got my first
-        computer. Ever since then, I have been honing my skills. I am passionate about creating innovative solutions that make people&apos;s lives
-        easier.
+        Hey there! I am Brandon Lim Jing Zhi, a software engineer based in Singapore. I fell in love with programming at the age of 12 when I got my
+        first computer. Ever since then, I have been honing my skills. I am passionate about creating innovative solutions that make people&apos;s
+        lives easier.
       </p>
       <p>
         In my free time, I occasionally work on my own ideas that I think are innovative to further my skills. Usually, if I am not programming, you

@@ -14,22 +14,19 @@ export const metadata: Metadata = {
     default: "Brandon Lim Jing Zhi",
     template: "%s - Brandon Lim Jing Zhi",
   },
-  description:
-    "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+  description: "Hey there! I am Brandon Lim Jing Zhi, a software engineer based in Singapore.",
   openGraph: {
     type: "website",
     title: "Brandon Lim Jing Zhi",
     url: `https://justbrandonlim.com/`,
     siteName: "Brandon Lim Jing Zhi",
-    description:
-      "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+    description: "Hey there! I am Brandon Lim Jing Zhi, a software engineer based in Singapore.",
     images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Brandon Lim Jing Zhi",
-    description:
-      "Hey there! I'm Brandon Lim Jing Zhi, and I'm currently a student at the Singapore Institute of Technology, pursuing my degree in BE in Information and Communications Technology (Software Engineering).",
+    description: "Hey there! I am Brandon Lim Jing Zhi, a software engineer based in Singapore.",
     images: [{ url: "https://justbrandonlim.com/brandon-lim-jing-zhi.png" }],
   },
   robots: {
