@@ -8,22 +8,28 @@ export { isType } from 'contentlayer/client'
 export type { Markdown, MDX, ImageFieldData, IsoDateTimeString }
 
 /** Document types */
-export type BlogPost = {
+export type Post = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'BlogPost'
-  /** The title of the post */
+  type: 'Post'
   title: string
-  /** The date of the post */
-  date: string
-  /** The description of the post */
-  description: string
-  /** The tags of the post */
-  tags: string[]
+  date: IsoDateTimeString
   /** MDX file body */
   body: MDX
-  slug: string
+  url: string
+}
+
+export type Work = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Work'
+  title: string
+  date: IsoDateTimeString
+  /** MDX file body */
+  body: MDX
+  url: string
 }  
 
 /** Nested types */
@@ -34,11 +40,17 @@ export type BlogPost = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = BlogPost
-export type DocumentTypeNames = 'BlogPost'
+export type DocumentTypes = Post | Work
+export type DocumentTypeNames = 'Post' | 'Work'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
+
+export type DataExports = {
+  allDocuments: DocumentTypes[]
+  allWorks: Work[]
+  allPosts: Post[]
+}
 
 
 export interface ContentlayerGenTypes {
@@ -49,6 +61,7 @@ export interface ContentlayerGenTypes {
   nestedTypeMap: NestedTypeMap
   nestedTypeNames: NestedTypeNames
   allTypeNames: AllTypeNames
+  dataExports: DataExports
 }
 
 declare global {
@@ -56,7 +69,8 @@ declare global {
 }
 
 export type DocumentTypeMap = {
-  BlogPost: BlogPost
+  Post: Post
+  Work: Work
 }
 
 export type NestedTypeMap = {

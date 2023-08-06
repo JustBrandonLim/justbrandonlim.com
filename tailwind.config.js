@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "class",
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       fontFamily: {
-        lexend: ["var(--font-lexend)", ...defaultTheme.fontFamily.sans],
-        literata: ["var(--font-literata)", ...defaultTheme.fontFamily.serif],
-        "fira-code": ["var(--font-fira-code)", ...defaultTheme.fontFamily.mono],
+        inter: ["var(--font-inter)"],
+        mono: ["var(--font-jetbrains-mono)"],
       },
     },
   },
