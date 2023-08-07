@@ -3,9 +3,12 @@
 import { useState, useEffect } from "react";
 
 export default function ThemeButton() {
+  const [isMounted, setIsMounted] = useState<boolean>(false);
   const [currentTheme, setCurrentTheme] = useState<string>();
 
   useEffect(() => {
+    setIsMounted(true);
+
     if (localStorage.theme === "dark") {
       setCurrentTheme("dark");
     } else if (!("theme" in localStorage)) {
@@ -74,7 +77,7 @@ export default function ThemeButton() {
 
   return (
     <button
-      className="p-2 transition-colors duration-150 ease-in-out rounded-md dark:hover:bg-gray-800 hover:bg-gray-200"
+      className={`${isMounted ? "" : "invisible "}p-2 transition-colors duration-150 ease-in-out rounded-md dark:hover:bg-gray-800 hover:bg-gray-200`}
       aria-label="Toggle Theme"
       onClick={toggleTheme}
     >

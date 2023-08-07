@@ -14,7 +14,7 @@ export default function Works() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Works</h1>
+        <h1 className="text-2xl font-bold">Works</h1>
         <h2>Things that I did.</h2>
       </div>
 

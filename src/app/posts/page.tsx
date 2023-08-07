@@ -14,7 +14,7 @@ export default function Posts() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Posts</h1>
+        <h1 className="text-2xl font-bold">Posts</h1>
         <h2>Things that I wrote.</h2>
       </div>
 

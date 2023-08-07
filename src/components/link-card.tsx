@@ -10,12 +10,12 @@ interface LinkCard {
 export default function LinkCard(props: LinkCard) {
   return (
     <Link
-      className="flex items-center justify-between gap-5 p-5 transition-colors border border-gray-200 rounded-md shadow-md dark:border-gray-800 dark:hover:border-white hover:border-black"
+      className="flex items-center justify-between p-5 transition-colors bg-white border border-gray-200 rounded-md shadow-md dark:bg-black dark:border-gray-800 dark:hover:border-white hover:border-black"
       href={props.href}
       aria-label={props["aria-label"]}
     >
       <div className="flex flex-col gap-2">
-        <h3 className="font-semibold">{props.platform}</h3>
+        <h3 className="font-bold">{props.platform}</h3>
         <p>{props.handle}</p>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 shrink-0">

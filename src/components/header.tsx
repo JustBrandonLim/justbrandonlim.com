@@ -19,10 +19,6 @@ export default function Header() {
       href: "/links",
     },
     {
-      title: "Resume",
-      href: "/resume",
-    },
-    {
       title: "Uses",
       href: "/uses",
     },

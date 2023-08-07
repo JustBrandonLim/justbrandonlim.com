@@ -10,7 +10,7 @@ export default function Links() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Links</h1>
+        <h1 className="text-2xl font-bold">Links</h1>
         <h2>Things that I scroll.</h2>
       </div>
 

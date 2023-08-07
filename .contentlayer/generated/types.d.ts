@@ -15,6 +15,7 @@ export type Post = {
   type: 'Post'
   title: string
   date: IsoDateTimeString
+  description: string
   /** MDX file body */
   body: MDX
   url: string
@@ -27,6 +28,7 @@ export type Work = {
   type: 'Work'
   title: string
   date: IsoDateTimeString
+  description: string
   /** MDX file body */
   body: MDX
   url: string

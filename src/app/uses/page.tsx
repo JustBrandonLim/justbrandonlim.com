@@ -10,7 +10,7 @@ export default function Uses() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Uses</h1>
+        <h1 className="text-2xl font-bold">Uses</h1>
         <h2>Things that I use.</h2>
       </div>
 

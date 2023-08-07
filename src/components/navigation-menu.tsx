@@ -42,7 +42,7 @@ export default function NavigationMenu(props: NavigationMenu) {
       <ul
         className={`${
           isOpened ? "flex flex-col gap-3 opacity-100" : "hidden opacity-0"
-        } transition-opacity absolute right-0 w-40 border dark:border-gray-800 border-gray-200 rounded-md shadow-md p-5 mt-2 dark:bg-black bg-white`}
+        } transition-opacity z-10 absolute right-0 w-40 border dark:border-gray-800 border-gray-200 rounded-md shadow-md p-5 mt-2 dark:bg-black bg-white`}
       >
         {props.navigationItems.map((navigationItem, i) => {
           return (

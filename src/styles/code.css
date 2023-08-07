@@ -1,0 +1,67 @@
+/*
+  Currently only supports the following styles:
+  - Light Mode/Dark Mode
+  - Title
+  - Line Highlight
+  - Code Block
+  - Code
+*/
+
+/* Hide Dark Code Blocks if not on Dark Mode */
+html:not(.dark) .prose div[data-theme="dark"],
+html:not(.dark) .prose pre[data-theme="dark"],
+html:not(.dark) .prose code[data-theme="dark"] {
+  display: none;
+}
+
+/* Hide Light Code Blocks if not on Light Mode */
+html.dark .prose div[data-theme="light"],
+html.dark .prose pre[data-theme="light"],
+html.dark .prose code[data-theme="light"] {
+  display: none;
+}
+
+/* Code Block Styles */
+.prose div[data-rehype-pretty-code-fragment] {
+  @apply my-10;
+}
+
+/* Code Block Title Styles */
+.prose div[data-rehype-pretty-code-title] {
+  @apply px-5 py-2 font-mono bg-white border border-b-0 border-gray-200 dark:bg-black rounded-t-md dark:border-gray-800;
+}
+
+/* Make Code Block's top not rounded, to fit with Code Block Title, if it exists */
+.prose div[data-rehype-pretty-code-title] + pre {
+  @apply rounded-t-none;
+}
+
+/* Code Block Styles */
+.prose pre {
+  @apply px-0 py-5 m-0 bg-white border border-gray-200 shadow-md rounded-b-md dark:bg-black dark:border-gray-800;
+}
+
+/* Code Lines Styles */
+.prose pre code {
+  @apply grid gap-2;
+}
+
+/* Code Line Styles */
+.prose span[data-line] {
+  @apply px-5 text-sm;
+}
+
+/* Code Highlighted Characters Styles */
+/*.prose span span[data-highlighted-chars] {
+  @apply p-1 bg-gray-200 dark:bg-gray-800;
+}*/
+
+/* Code Highlighted Lines Styles */
+.prose span[data-highlighted-line] {
+  @apply pl-[16px] bg-gray-200 border-l-4 border-blue-500 dark:bg-gray-800;
+}
+
+/* Code Styles */
+.prose code:not(pre > code) {
+  @apply p-1 bg-white border border-gray-200 rounded-md shadow-md dark:border-gray-800 dark:bg-black;
+}
