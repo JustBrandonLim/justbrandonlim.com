@@ -6,6 +6,22 @@ import PostCard from "@components/post-card";
 export const metadata: Metadata = {
   title: "Posts",
   description: "Things that I wrote.",
+  alternates: {
+    canonical: "/posts",
+  },
+  openGraph: {
+    type: "website",
+    title: "Posts",
+    description: "Things that I wrote.",
+    locale: "en_SG",
+    url: "/posts",
+    images: [
+      {
+        url: "/api/image?title=Posts | JustBrandonLim",
+        alt: "Posts | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Posts() {

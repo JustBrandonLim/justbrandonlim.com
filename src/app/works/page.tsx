@@ -6,6 +6,22 @@ import WorkCard from "@components/work-card";
 export const metadata: Metadata = {
   title: "Works",
   description: "Things that I did.",
+  alternates: {
+    canonical: "/works",
+  },
+  openGraph: {
+    type: "website",
+    title: "Works",
+    description: "Things that I did.",
+    locale: "en_SG",
+    url: "/works",
+    images: [
+      {
+        url: "/api/image?title=Works | JustBrandonLim",
+        alt: "Works | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Works() {

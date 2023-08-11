@@ -21,6 +21,24 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/posts/${params.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      locale: "en_SG",
+      url: `/posts/${params.slug}`,
+      images: [
+        {
+          url: `/api/image?title=${post.title}&subTitle=@JustBrandonLim`,
+          alt: `${post.title} | JustBrandonLim`,
+        },
+      ],
+      publishedTime: post.date,
+      authors: ["JustBrandonLim"],
+    },
   };
 }
 

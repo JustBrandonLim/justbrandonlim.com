@@ -13,13 +13,49 @@ export const metadata: Metadata = {
     default: "JustBrandonLim",
   },
   description: "Software engineer from Singapore.",
+  metadataBase: new URL("https://justbrandonlim.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    siteName: "JustBrandonLim",
+    type: "website",
+    title: {
+      template: "%s | JustBrandonLim",
+      default: "JustBrandonLim",
+    },
+    description: "Software engineer from Singapore.",
+    locale: "en_SG",
+    url: "/",
+    images: [
+      {
+        url: "/api/image?title=JustBrandonLim",
+        alt: "JustBrandonLim",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="antialiased" suppressHydrationWarning={true}>
+    <html lang="en_SG" className="antialiased" suppressHydrationWarning={true}>
       <head>
-        <script src="/theme.js" />
+        <script src="/scripts/theme.js" />
       </head>
       <body
         className={`${inter.variable} ${jetBrainsMono.variable} dark:bg-black bg-white dark:text-white text-black text-sm max-w-2xl m-auto p-5 font-inter min-h-screen flex flex-col gap-10`}

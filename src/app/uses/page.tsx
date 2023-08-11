@@ -4,6 +4,22 @@ import UseCard from "@components/use-card";
 export const metadata: Metadata = {
   title: "Uses",
   description: "Things that I use.",
+  alternates: {
+    canonical: "/uses",
+  },
+  openGraph: {
+    type: "website",
+    title: "Uses",
+    description: "Things that I use.",
+    locale: "en_SG",
+    url: "/uses",
+    images: [
+      {
+        url: "/api/image?title=Uses | JustBrandonLim",
+        alt: "Uses | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Uses() {

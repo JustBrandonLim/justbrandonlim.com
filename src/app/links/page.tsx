@@ -4,6 +4,22 @@ import LinkCard from "@components/link-card";
 export const metadata: Metadata = {
   title: "Links",
   description: "Things that I scroll.",
+  alternates: {
+    canonical: "/links",
+  },
+  openGraph: {
+    type: "website",
+    title: "Links",
+    description: "Things that I scroll.",
+    locale: "en_SG",
+    url: "/links",
+    images: [
+      {
+        url: "/api/image?title=Links | JustBrandonLim",
+        alt: "Links | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Links() {

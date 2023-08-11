@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavigationMenuItem from "@components/navigation-menu-item";
 
 interface NavigationMenu {
@@ -12,6 +12,17 @@ interface NavigationMenu {
 
 export default function NavigationMenu(props: NavigationMenu) {
   const [isOpened, setIsOpened] = useState<boolean>(false);
+
+  function ClickEventListener() {
+    setIsOpened(false);
+    document.removeEventListener("click", ClickEventListener);
+  }
+
+  useEffect(() => {
+    if (isOpened) {
+      document.addEventListener("click", ClickEventListener);
+    }
+  }, [isOpened]);
 
   return (
     <div className="relative inline-block md:hidden">
