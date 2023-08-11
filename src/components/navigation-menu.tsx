@@ -15,14 +15,17 @@ export default function NavigationMenu(props: NavigationMenu) {
 
   function ClickEventListener() {
     setIsOpened(false);
-    document.removeEventListener("click", ClickEventListener);
   }
 
   useEffect(() => {
     if (isOpened) {
       document.addEventListener("click", ClickEventListener);
     }
-  }, [isOpened, ClickEventListener]);
+
+    return () => {
+      document.removeEventListener("click", ClickEventListener);
+    };
+  }, [isOpened]);
 
   return (
     <div className="relative inline-block md:hidden">
