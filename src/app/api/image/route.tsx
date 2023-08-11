@@ -6,8 +6,9 @@ import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const interBold = fs.promises.readFile(path.join(url.fileURLToPath(import.meta.url), "../../../../../public/fonts/inter-bold.woff"));
-  const interRegular = fs.promises.readFile(path.join(url.fileURLToPath(import.meta.url), "../../../../../public/fonts/inter-regular.woff"));
+  console.log(process.cwd());
+  const interBold = fs.promises.readFile(path.resolve("./public", "./fonts/inter-bold.woff"));
+  const interRegular = fs.promises.readFile(path.resolve("./public", "./fonts/inter-regular.woff"));
 
   const searchParameters = request.nextUrl.searchParams;
 
