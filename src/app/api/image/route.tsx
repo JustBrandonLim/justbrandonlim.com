@@ -25,15 +25,16 @@ export async function GET(request: NextRequest) {
           justifyContent: "center",
           fontFamily: "Inter",
           color: "white",
+          padding: "20px",
         }}
       >
-        <h1 style={{ fontSize: 100, fontWeight: "700" }}>{title}</h1>
-        <h2 style={{ fontSize: 30, fontWeight: "400" }}>{subTitle}</h2>
+        <h1 style={{ fontSize: "60px", fontWeight: "700", wordBreak: "break-word", textAlign: "center" }}>{title}</h1>
+        <h2 style={{ fontSize: "20px", fontWeight: "400", wordBreak: "break-word", textAlign: "center" }}>{subTitle}</h2>
       </div>
     ),
     {
-      width: 1920,
-      height: 1080,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "Inter",
