@@ -22,7 +22,7 @@ export default function NavigationMenu(props: NavigationMenu) {
     if (isOpened) {
       document.addEventListener("click", ClickEventListener);
     }
-  }, [isOpened]);
+  }, [isOpened, ClickEventListener]);
 
   return (
     <div className="relative inline-block md:hidden">

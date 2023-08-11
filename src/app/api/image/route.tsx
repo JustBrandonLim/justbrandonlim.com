@@ -1,8 +1,6 @@
 import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/server";
 
-export const runtime = "edge";
-
 export async function GET(request: NextRequest) {
   const interBold = fetch(new URL("../../../../public/fonts/inter-bold.ttf", import.meta.url)).then((res) => res.arrayBuffer());
   const interRegular = fetch(new URL("../../../../public/fonts/inter-regular.ttf", import.meta.url)).then((res) => res.arrayBuffer());
