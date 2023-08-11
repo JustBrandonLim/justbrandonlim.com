@@ -1,12 +1,10 @@
 import * as fs from "fs";
 import * as path from "path";
-import * as url from "url";
 
 import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  console.log(process.cwd());
   const interBold = fs.promises.readFile(path.resolve("./public", "./fonts/inter-bold.woff"));
   const interRegular = fs.promises.readFile(path.resolve("./public", "./fonts/inter-regular.woff"));
 
