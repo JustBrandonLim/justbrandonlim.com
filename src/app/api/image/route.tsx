@@ -1,12 +1,13 @@
+import * as fs from "fs";
+import * as path from "path";
+import * as url from "url";
+
 import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/server";
 
-export const runtime = "edge";
-export const dynamic = "force-static";
-
 export async function GET(request: NextRequest) {
-  const interBold = fetch(new URL("../../../../public/fonts/inter-bold.woff", import.meta.url)).then((res) => res.arrayBuffer());
-  const interRegular = fetch(new URL("../../../../public/fonts/inter-regular.woff", import.meta.url)).then((res) => res.arrayBuffer());
+  const interBold = fs.promises.readFile(path.join(url.fileURLToPath(import.meta.url), "../../../../../public/fonts/inter-bold.woff"));
+  const interRegular = fs.promises.readFile(path.join(url.fileURLToPath(import.meta.url), "../../../../../public/fonts/inter-regular.woff"));
 
   const searchParameters = request.nextUrl.searchParams;
 
