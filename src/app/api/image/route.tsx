@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function GET(request: NextRequest) {
   const interBold = fetch(new URL("../../../../public/fonts/inter-bold.woff", import.meta.url)).then((res) => res.arrayBuffer());
