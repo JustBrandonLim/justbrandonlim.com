@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
         }}
       >
         <h1 style={{ fontSize: "60px", fontWeight: "700", wordBreak: "break-word", textAlign: "center" }}>{title}</h1>
-        <h2 style={{ fontSize: "20px", fontWeight: "400", wordBreak: "break-word", textAlign: "center" }}>{subTitle}</h2>
+        <h2 style={{ fontSize: "30px", fontWeight: "400", wordBreak: "break-word", textAlign: "center" }}>{subTitle}</h2>
       </div>
     ),
     {
