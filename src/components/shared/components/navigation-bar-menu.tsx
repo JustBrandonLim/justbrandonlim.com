@@ -1,25 +1,42 @@
 "use client";
 
-import { useState } from "react";
-import NavigationMenuItem from "@components/navigation-menu-item";
+import { useState, useEffect } from "react";
+import NavigationBarMenuItem from "@components/shared/components/navigation-bar-menu-item";
 
-interface NavigationMenu {
+interface NavigationBarMenu {
+  title: string;
   navigationItems: {
     title: string;
     href: string;
   }[];
 }
 
-export default function NavigationMenu(props: NavigationMenu) {
+export default function NavigationBarMenu(props: NavigationBarMenu) {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
+  function ClickEventListener() {
+    setIsOpened(false);
+  }
+
+  useEffect(() => {
+    if (isOpened) {
+      document.addEventListener("click", ClickEventListener);
+    }
+
+    return () => {
+      document.removeEventListener("click", ClickEventListener);
+    };
+  }, [isOpened]);
+
   return (
-    <div className="relative inline-block md:hidden">
+    <li className="relative">
       <button
-        className="p-2 transition-colors duration-150 ease-in-out rounded-md dark:hover:bg-gray-800 hover:bg-gray-200"
-        aria-label="Toggle Navigation Menu"
+        className="inline-flex items-center gap-2 p-2 transition-colors rounded-md select-none dark:hover:bg-gray-800 hover:bg-gray-200"
+        aria-label="Toggle Navigation Bar Menu"
+        type="button"
         onClick={() => setIsOpened(!isOpened)}
       >
+        {props.title}
         {isOpened ? (
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
             <path
@@ -41,17 +58,13 @@ export default function NavigationMenu(props: NavigationMenu) {
 
       <ul
         className={`${
-          isOpened ? "flex flex-col gap-3 opacity-100" : "hidden opacity-0"
-        } transition-opacity absolute right-0 w-40 border dark:border-gray-800 border-gray-200 rounded-md shadow-md p-5 mt-2 dark:bg-black bg-white`}
+          isOpened ? "flex flex-col gap-3" : "hidden"
+        } z-10 absolute border min-w-[10rem] right-0 dark:border-gray-800 border-gray-200 rounded-md shadow-md p-5 mt-2 dark:bg-black bg-white`}
       >
         {props.navigationItems.map((navigationItem, i) => {
-          return (
-            <li key={i}>
-              <NavigationMenuItem title={navigationItem.title} href={navigationItem.href} />
-            </li>
-          );
+          return <NavigationBarMenuItem key={i} title={navigationItem.title} href={navigationItem.href} />;
         })}
       </ul>
-    </div>
+    </li>
   );
 }

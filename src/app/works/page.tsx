@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
 import { allWorks } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
-import WorkCard from "@components/work-card";
+import WorkCard from "@components/works/work-card";
 
 export const metadata: Metadata = {
   title: "Works",
   description: "Things that I did.",
+  alternates: {
+    canonical: "/works",
+  },
+  openGraph: {
+    type: "website",
+    title: "Works",
+    description: "Things that I did.",
+    locale: "en_SG",
+    url: "/works",
+    images: [
+      {
+        url: "/api/image?title=Works | JustBrandonLim",
+        alt: "Works | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Works() {
@@ -14,11 +30,11 @@ export default function Works() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Works</h1>
+        <h1 className="text-2xl font-bold">Works</h1>
         <h2>Things that I did.</h2>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {works.map((work, i) => {
           return <WorkCard key={i} title={work.title} date={format(parseISO(work.date), "LLLL d, yyyy")} href={work.url} aria-label={work.title} />;
         })}

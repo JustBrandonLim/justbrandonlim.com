@@ -1,20 +1,36 @@
 import type { Metadata } from "next";
-import LinkCard from "@components/link-card";
+import LinkCard from "@components/links/link-card";
 
 export const metadata: Metadata = {
   title: "Links",
   description: "Things that I scroll.",
+  alternates: {
+    canonical: "/links",
+  },
+  openGraph: {
+    type: "website",
+    title: "Links",
+    description: "Things that I scroll.",
+    locale: "en_SG",
+    url: "/links",
+    images: [
+      {
+        url: "/api/image?title=Links | JustBrandonLim",
+        alt: "Links | JustBrandonLim",
+      },
+    ],
+  },
 };
 
 export default function Links() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl font-bold">Links</h1>
+        <h1 className="text-2xl font-bold">Links</h1>
         <h2>Things that I scroll.</h2>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         <LinkCard platform="GitHub" handle="@JustBrandonLim" href="https://www.github.com/JustBrandonLim" aria-label="JustBrandonLim on GitHub" />
         <LinkCard
           platform="LeetCode"
@@ -32,8 +48,6 @@ export default function Links() {
         <LinkCard platform="YouTube" handle="@JustBrandonLim" href="https://www.youtube.com/@JustBrandonLim" aria-label="JustBrandonLim on YouTube" />
         <LinkCard platform="Instagram" handle="@___bljz" href="https://www.instagram.com/___bljz" aria-label="JustBrandonLim on Instagram" />
       </div>
-
-      {/*<p className="text-justify">Work in progress.</p>*/}
     </section>
   );
 }

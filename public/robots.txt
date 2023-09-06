@@ -1,4 +1,0 @@
-Sitemap: https://justbrandonlim.com/sitemap.xml
-
-User-agent: *
-Allow: /
