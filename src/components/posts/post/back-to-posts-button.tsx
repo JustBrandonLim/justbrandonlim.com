@@ -3,9 +3,10 @@ import Link from "next/link";
 export default function BackToPostsButton() {
   return (
     <Link
-      className="flex items-center self-end gap-2 p-2 transition-colors rounded-md select-none dark:hover:bg-gray-800 hover:bg-gray-200"
+      className="inline-flex items-center self-end gap-2 p-2 transition-colors rounded-md select-none dark:hover:bg-gray-800 hover:bg-gray-200"
       href="/posts"
       aria-label="Back to Posts"
+      type="button"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
         <path

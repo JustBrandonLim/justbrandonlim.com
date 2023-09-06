@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function ThemeButton() {
+export default function ToggleThemeButton() {
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [currentTheme, setCurrentTheme] = useState<string>();
 
@@ -77,8 +77,11 @@ export default function ThemeButton() {
 
   return (
     <button
-      className={`${isMounted ? "" : "invisible "}p-2 transition-colors duration-150 ease-in-out rounded-md dark:hover:bg-gray-800 hover:bg-gray-200`}
+      className={`${
+        isMounted ? "" : "invisible "
+      }p-2 inline-flex transition-colors duration-150 ease-in-out rounded-md dark:hover:bg-gray-800 hover:bg-gray-200`}
       aria-label="Toggle Theme"
+      type="button"
       onClick={toggleTheme}
     >
       {getCurrentSVG()}

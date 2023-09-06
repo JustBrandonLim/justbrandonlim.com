@@ -1,8 +1,8 @@
 import { allPosts } from ".contentlayer/generated";
 import { notFound } from "next/navigation";
 import { format, parseISO, formatDistance } from "date-fns";
-import MDX from "@components/mdx";
-import BackToPostsButton from "@components/back-to-posts-button";
+import MDX from "@components/mdx/mdx";
+import BackToPostsButton from "@components/posts/post/back-to-posts-button";
 import "../../../styles/code.css";
 
 export async function generateStaticParams() {

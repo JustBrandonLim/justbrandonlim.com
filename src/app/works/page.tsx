@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { allWorks } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
-import WorkCard from "@components/work-card";
+import WorkCard from "@components/works/work-card";
 
 export const metadata: Metadata = {
   title: "Works",
@@ -34,7 +34,7 @@ export default function Works() {
         <h2>Things that I did.</h2>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {works.map((work, i) => {
           return <WorkCard key={i} title={work.title} date={format(parseISO(work.date), "LLLL d, yyyy")} href={work.url} aria-label={work.title} />;
         })}

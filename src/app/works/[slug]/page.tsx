@@ -1,9 +1,10 @@
 import { allWorks } from ".contentlayer/generated";
 import { notFound } from "next/navigation";
 import { format, parseISO, formatDistance } from "date-fns";
-import MDX from "@components/mdx";
-import BackToWorksButton from "@components/back-to-works-button";
+import MDX from "@components/mdx/mdx";
+import BackToWorksButton from "@components/works/work/back-to-works-button";
 import "../../../styles/code.css";
+import LikeWorkButton from "@components/works/work/like-work-button";
 
 export async function generateStaticParams() {
   return allWorks.map((work) => ({ slug: work._raw.flattenedPath }));

@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Header from "@components/header";
-import Footer from "@components/footer";
+import Header from "@components/shared/header";
+import Footer from "@components/shared/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       template: "%s | JustBrandonLim",
       default: "JustBrandonLim",
     },
-    description: "Software engineer from Singapore.",
+    description: "A software engineer from Singapore.",
     locale: "en_SG",
     url: "/",
     images: [

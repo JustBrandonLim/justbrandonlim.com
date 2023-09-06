@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-bold animate-bounce">JustBrandonLim</h1>
+        <h1 className="text-2xl font-bold">JustBrandonLim</h1>
         <h2>I am a software engineer from Singapore.</h2>
       </div>
 

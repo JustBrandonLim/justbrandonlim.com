@@ -1,5 +1,6 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
-import RoundedImage from "@components/mdx/rounded-image";
+import Image from "@components/mdx/components/image";
+import CallOut from "@components/mdx/components/call-out";
 
 interface MDX {
   code: string;
@@ -8,5 +9,5 @@ interface MDX {
 export default function MDX(props: MDX) {
   const MDXContent = useMDXComponent(props.code);
 
-  return <MDXContent components={{ RoundedImage }} />;
+  return <MDXContent components={{ Image, CallOut }} />;
 }

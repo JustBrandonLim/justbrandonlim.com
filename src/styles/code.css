@@ -62,6 +62,6 @@ html.dark .prose code[data-theme="light"] {
 }
 
 /* Code Styles */
-.prose code:not(pre > code) {
+/*.prose code:not(pre > code) {
   @apply p-1 bg-white border border-gray-200 rounded-md shadow-md dark:border-gray-800 dark:bg-black;
-}
+}*/
