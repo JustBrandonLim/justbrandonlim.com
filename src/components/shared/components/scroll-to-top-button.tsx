@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function ScrollToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     ["load", "resize", "scroll"].forEach((event) => {
