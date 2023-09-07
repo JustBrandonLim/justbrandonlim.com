@@ -60,7 +60,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       <hr className="border-gray-200 dark:border-gray-800" />
 
-      <article className="prose-sm prose max-w-none dark:prose-invert prose-custom">
+      <article className="prose-sm prose max-w-none dark:prose-invert prose-custom prose-code:font-jetbrains-mono">
         <MDX code={work.body.code} />
       </article>
 
