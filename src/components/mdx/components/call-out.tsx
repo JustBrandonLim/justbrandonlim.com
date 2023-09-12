@@ -6,7 +6,7 @@ interface CallOut {
 
 export default function CallOut(props: CallOut) {
   return (
-    <div className="flex gap-5 p-5 my-10 bg-white border border-black rounded-md shadow-md dark:bg-black dark:border-white">
+    <div className="flex gap-5 p-5 my-5 bg-white border border-black rounded-md shadow-md dark:bg-black dark:border-white">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 shrink-0">
         <path
           fillRule="evenodd"

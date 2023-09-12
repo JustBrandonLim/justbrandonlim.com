@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { allWorks } from "contentlayer/generated";
-import { compareDesc, format, parseISO } from "date-fns";
 import WorkCard from "@components/works/work-card";
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function Works() {
-  const works = allWorks.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+  const works = allWorks.sort((a, b) => b.date.localeCompare(a.date, "en-SG"));
 
   return (
     <section className="flex flex-col gap-10">
@@ -36,7 +35,15 @@ export default function Works() {
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {works.map((work, i) => {
-          return <WorkCard key={i} title={work.title} date={format(parseISO(work.date), "LLLL d, yyyy")} href={work.url} aria-label={work.title} />;
+          return (
+            <WorkCard
+              key={i}
+              title={work.title}
+              date={new Date(work.date).toLocaleString("en-SG", { day: "numeric", month: "long", year: "numeric" })}
+              href={work.url}
+              aria-label={work.title}
+            />
+          );
         })}
       </div>
     </section>

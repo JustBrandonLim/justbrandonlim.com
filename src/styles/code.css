@@ -23,7 +23,7 @@ html.dark .prose code[data-theme="light"] {
 
 /* Code Block Styles */
 .prose div[data-rehype-pretty-code-fragment] {
-  @apply my-10;
+  @apply my-5;
 }
 
 /* Code Block Title Styles */

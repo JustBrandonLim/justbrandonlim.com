@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { allPosts } from "contentlayer/generated";
-import { compareDesc, format, parseISO } from "date-fns";
 import PostCard from "@components/posts/post-card";
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function Posts() {
-  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+  const posts = allPosts.sort((a, b) => b.date.localeCompare(a.date, "en-SG"));
 
   return (
     <section className="flex flex-col gap-10">
@@ -36,7 +35,15 @@ export default function Posts() {
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {posts.map((post, i) => {
-          return <PostCard key={i} title={post.title} date={format(parseISO(post.date), "LLLL d, yyyy")} href={post.url} aria-label={post.title} />;
+          return (
+            <PostCard
+              key={i}
+              title={post.title}
+              date={new Date(post.date).toLocaleString("en-SG", { day: "numeric", month: "long", year: "numeric" })}
+              href={post.url}
+              aria-label={post.title}
+            />
+          );
         })}
       </div>
     </section>

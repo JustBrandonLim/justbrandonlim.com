@@ -1,0 +1,41 @@
+---
+title: "Solving Two Sum"
+date: "2023-09-11"
+description: "Let's take a look at solving Two Sum."
+---
+
+Let's take a look at solving Two Sum.
+
+## Problem
+
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+## Thought Process
+
+The first thing that I thought of was to use two `for` loops so that I could iterate through all the integers inside `nums` and sum them both up to see if they equal `target`.
+
+The second thing that I thought of was to ensure that the inner `for` loop is always +1 of the outer loop, so that we can ensure that the same element is not repeated.
+
+## Solution
+
+```csharp
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        for (int firstIndex = 0; firstIndex < nums.Length; firstIndex++) {
+            for (int secondIndex = firstIndex + 1; secondIndex < nums.Length; secondIndex++) {
+                if (nums[firstIndex] + nums[secondIndex] == target) {
+                    return new int[] { firstIndex, secondIndex };
+                }
+            }
+        }
+
+        return new int[] { 0, 0 };
+    }
+}
+```
+
+This is probably not the best solution out there, but I think it is fast enough.

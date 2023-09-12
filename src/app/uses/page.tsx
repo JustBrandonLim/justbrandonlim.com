@@ -31,7 +31,6 @@ export default function Uses() {
       </div>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-        {/*<div className="flex flex-col gap-10">*/}
         <UseCard title="Laptop" product="MacBook Pro (14-inch, 2023)" />
         <UseCard title="Desktop" product="Custom Built, AMD Ryzen 5 5600X, GIGABYTE GeForce RTX&trade; 3060 Ti GAMING OC 8G" />
         <UseCard title="Monitor" product='PRISM+ X240, LG 24" FULL HD IPS' />
