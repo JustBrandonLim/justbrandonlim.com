@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
+    siteName: "JustBrandonLim",
     title: work.title,
     description: work.description,
     alternates: {

@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       canonical: `/posts/${params.slug}`,
     },
     openGraph: {
+      siteName: "JustBrandonLim",
       type: "article",
       title: post.title,
       description: post.description,

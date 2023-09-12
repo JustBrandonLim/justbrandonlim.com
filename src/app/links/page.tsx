@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: "/links",
   },
   openGraph: {
+    siteName: "JustBrandonLim",
     type: "website",
     title: "Links",
     description: "Things that I scroll.",
