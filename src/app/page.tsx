@@ -18,7 +18,7 @@ export default function Home() {
         Currently, I am trying to write more posts and also practise my problem-solving skills on LeetCode. I am also looking at creating content on
         YouTube to share my programming knowledge.
       </p>
-      <p>Feel free to check out my digital hub!</p>
+      <p>Feel free to check out my digital garden!</p>
     </section>
   );
 }
